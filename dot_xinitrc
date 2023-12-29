@@ -1,4 +1,3 @@
-echo "STARTING EXECUTION OF .xinitrc"
 # Set the keyboard map
 setxkbmap gb
 
@@ -14,17 +13,10 @@ xsetroot -solid "#333333"
 /usr/bin/dunst &
 
 # Set the resolution and refresh rate of the display port monitor
-xrandr --output HDMI-A-0 --mode 2560x1440
 xrandr --output DisplayPort-2 --mode 3840x2160 --right-of HDMI-A-0 --primary
-
-# xrandr --output DP-1 --mode 3440x1440 --rate 120
-# xrandr --output DP-2 --mode 2560x1440 --rate 95 --left-of DP-1
-
 
 # Set the keyboard delay and repeat rate
 xset r rate 200 40
 
 # Start i3
 exec i3
-
-echo "COMPLETED EXECUTION OF .xinitrc"
